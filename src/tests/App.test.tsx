@@ -3,16 +3,16 @@ import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 import "@testing-library/jest-dom"; // 📌 Importa jest-dom para evitar el error
 
-import Verify from "../components/Verify"; 
+import App from "../App"; 
 
 // 🔹 Mock del componente NumberInput para evitar errores de importación
 vi.mock("../components/ui/NumberInput", () => ({
   NumberInput: () => <input data-testid="number-input" />,
 }));
 
-describe("Verify Component", () => {
+describe("App Component", () => {
   it("debe renderizar correctamente", () => {
-    render(<Verify />);
+    render(<App />);
 
     // 📌 Verifica que el título se renderiza
     expect(screen.getByText("Verification")).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe("Verify Component", () => {
   });
 
   it("debe permitir hacer clic en el botón 'Complete'", async () => {
-    render(<Verify />);
+    render(<App />);
     
     const button = screen.getByRole("button", { name: /complete/i });
     await userEvent.click(button);

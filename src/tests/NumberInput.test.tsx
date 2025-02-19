@@ -44,6 +44,6 @@ describe("NumberInput Component", () => {
     await userEvent.type(inputs[0], "5");
     await userEvent.click(inputs[0]);
 
-    expect(document.activeElement).to.equal(inputs[0]); // ✅ Verifica que el input esté activo
+    expect(document.activeElement).to.equal(inputs[0]); 
   });
 });
