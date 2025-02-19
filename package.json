@@ -8,6 +8,7 @@
     "test:watch": "vitest --watch",
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "dit deploy",
     "lint": "eslint .",
     "preview": "vite preview"
   },
