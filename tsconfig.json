@@ -1,5 +1,4 @@
 {
-  
   "files": [],
   "references": [
     {
@@ -11,9 +10,6 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "paths": {
       "@/*": ["./src/*"]
     }
